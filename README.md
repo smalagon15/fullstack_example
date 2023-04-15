@@ -1,6 +1,6 @@
 # Introduction
 
-This is a full stack example project with the intention of showing code that you would write in your undergrad courses and turn it into a software service.
+This is a full stack example project with the intention of showing code that you would write in your undergrad courses and turn it into a software service. The folders palindrome and diamond are most like problems you would do for homework in an undergrad CS course. The rest of example_api is the code that is takes to run the code as an API. Then example_ui is an interface for the api outputs.
 
 # The Services
 
@@ -10,7 +10,7 @@ This is a react application runing in a node:19 docker container. Instead of rea
 
 ## example_api
 
-This is a python api runing in a python:3.8 docker container. We leverage uvicorn for development, which enables hot reloading.
+This is a python api runing in a python:3.8 docker container. We leverage uvicorn for development, which enables hot reloading. If you would like to test the api endpoints got to http://localhost:8000/docs to have a swaggar interface. 
 
 # Development & Deployment
 
