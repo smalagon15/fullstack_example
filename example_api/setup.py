@@ -5,8 +5,9 @@ import re
 import os
 
 ROOT_PATH = Path(os.path.dirname(os.path.abspath(__file__))).resolve()
-REQUIREMENTS_PATH = Path(ROOT_PATH, "requirements.txt")
+
 # Load requirements from a file name in local directory
+REQUIREMENTS_PATH = Path(ROOT_PATH, "requirements.txt")
 def parse_requirements(requirements: Path) -> List[str]:
     with requirements.open(mode="r") as fd:
 

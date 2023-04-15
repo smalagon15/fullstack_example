@@ -1,0 +1,24 @@
+.pending-form{
+    background-color: rgba($color: black, $alpha: .8);
+    margin:100px;
+    height: calc(100% - 200px);
+    min-height: fit-content;
+    overflow-y: auto;
+    color:#c1a66d;
+    h2{
+        color:#c1a66d;
+        font-family: kulturista-web;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 1.1em;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-rendering: optimizeLegibility;
+        padding:20px 17px 17px 17px;
+        text-align: center;
+    }
+    p {
+        padding:60px;
+    }
+}

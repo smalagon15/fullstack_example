@@ -1,0 +1,37 @@
+version: '3.8'
+# Define the two Docker Containers to build and run
+
+# Tells docker where to find:
+# the Dockerfile (build), 
+# which ports to expose (ports), 
+# environment variables to set (environment),
+# and which directories (volumes) to map changes from your local folders to the folders in the docker containers
+
+services:
+  # The python api to run on http://localhost:8000
+  example_api:
+    container_name: example_api
+    restart: always
+    build: ./example_api
+    environment:
+      # This tells the bash script start.sh to start the api in dev mode
+      - ENV_TYPE=DEV
+      # This stops your api from generating _pycache_ files
+      - PYTHONDONTWRITEBYTECODE=1
+    ports:
+      # The api starts on port 80 but we will map that to 8000 for your computer 
+      - 8000:80
+    volumes:
+      - ./example_api/src/:/src/
+  # The react webpage to run on http://localhost
+  example_ui:
+    container_name: example_ui
+    build: ./example_ui
+    restart: always
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - 80:80
+    volumes:
+      - ./example_ui/:/app/
+      - /app/node_modules

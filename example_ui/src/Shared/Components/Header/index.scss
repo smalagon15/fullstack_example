@@ -1,0 +1,77 @@
+.home{
+    .header{
+        height: 50px;
+        width: 100%;
+        padding-left: 16px;
+        
+        color: white;
+        position: fixed;
+        background:linear-gradient(#1f4d62, rgb(30, 55, 78));
+        z-index: 2;
+        user-select: none;
+        box-shadow: rgba(30, 55, 78, 0.5) 0px 1px;
+        .profile {
+            &-controls {
+              position: relative;
+              float: right;
+            }
+            &-icon {
+              cursor: pointer;
+            }
+            &-menu {
+              background-color: rgba($color: #5264ae, $alpha: 0.9);
+              position: absolute;
+              top: 100%;
+              right: 0;
+              min-width: 200px;
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        a{
+            -webkit-font-smoothing: subpixel-antialiased;
+            font-family: Source Code Pro;
+            font-style: normal;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1em;
+            text-decoration: none;
+            color:white;
+        }
+        a:visited{
+            color:white;
+        }
+        a:hover{
+            color: grey;
+        }
+    }
+    
+    hr{
+        border-style: none;
+        border-width: 0;
+        margin: 0;
+        color: rgba(42,39,39,.35);
+        background-color: rgba(42,39,39,.35);
+        border: none;
+        height: 2px;
+        width:80vw;
+        position: absolute;
+        bottom: 0;
+        left:10vw
+    }
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.username{
+  color:#1f4d62;
+  text-align: center;
+  margin:auto;
+  padding:8px;
+  padding-top:0%;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
