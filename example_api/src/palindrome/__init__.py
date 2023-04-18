@@ -1,6 +1,6 @@
 class Palindrome:
     def __init__(self, word):
-        self.word = word
+        self.word = word.lower()
 
     def is_palnedrome(self):
         word_length = len(self.word)
