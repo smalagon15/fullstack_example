@@ -1,25 +1,20 @@
 /**
  * Authorize and use base line methods for endpoints.
- * The function BaseAPI at the begining is the class 
- * constuctor while the prototype defines the class methods.
+ * The goal is to simplify the use of fetch REST calls to an API
  * @class BaseAPI
  */
-const BaseAPI = (port = 0) => {
-  // Set a port to be used in constructing the URL for requests
-  this.port = port;
-  // Setting the request types for REST
-  this.requestTypes = {
-    get:'GET',
-    post:'POST',
-    put:'PUT',
-    delete:'DELETE'
+class BaseAPI {
+  constructor(port=null){
+    // The port of the api. If null it will not be considered.
+    this.port = port;
+    // Setting the request types for REST
+    this.requestTypes = {
+      get:'GET',
+      post:'POST',
+      put:'PUT',
+      delete:'DELETE'
+    }
   }
-  return this;
-}
-/**
- * The Class methods
- */
-BaseAPI.prototype =  {
   /**
    * Using base path and the extention, gets a promise containing data
    * @method get
@@ -31,7 +26,7 @@ BaseAPI.prototype =  {
       this.requestTypes.get,
       extention
     )
-  },
+  }
   /**
    * Using base path and the extention, posts stringified JSON to the api.
    * @method post
@@ -45,7 +40,7 @@ BaseAPI.prototype =  {
       extention,
       JSON.stringify(data)
     )
-  },
+  }
   /**
    * Using base path and the extention, converts incoming object into a FormData object and posts to the api.
    * Note this is usefull when sending files to the api as files don't stringify well.
@@ -63,9 +58,10 @@ BaseAPI.prototype =  {
     return this.sendRequest(
       this.requestTypes.post,
       extention,
-      form
+      form,
+      true
     )
-  },
+  }
   /**
    * Build the base url to hit the target api hosted from the same machine as the ui
    * @method baseURL
@@ -88,7 +84,7 @@ BaseAPI.prototype =  {
       url += ":" + this.port;
     }
     return url;
-  },
+  }
   /**
    * @method getHeaders
    * @returns {Object} - a headers object.
@@ -105,7 +101,7 @@ BaseAPI.prototype =  {
       myHeaders.append("Authorization", "Bearer " + token);
     }
     return myHeaders;
-  },
+  }
   
   /**
    * @method sendRequest
@@ -114,13 +110,13 @@ BaseAPI.prototype =  {
    * @param {*} [data={}] - data to send. Is optional for gets
    * @return {*} The result is a promise. To read the result use await or then.
    */
-  sendRequest(method, extention, body = {}) {
+  sendRequest(method, extention, body = {}, form = false) {
     // Forming the fetch request with the right method and headers
     const Data = {
       method, // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, cors, *same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-      headers: this.getHeaders(),
+      headers: this.getHeaders(form),
       redirect: "follow", // manual, *follow, error
       referrer: "no-referrer", // no-referrer, *client
     };
@@ -140,7 +136,7 @@ BaseAPI.prototype =  {
       .catch(error => {
         throw(error);
       });
-  },
+  }
 };
 
 export default BaseAPI;

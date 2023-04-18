@@ -44,7 +44,7 @@ const Header = (props) =>{
     }
     
     return (
-        <div className='home'>
+        <div className='header-component'>
             <div className='header'>
                 <IconButton
                     size="large"

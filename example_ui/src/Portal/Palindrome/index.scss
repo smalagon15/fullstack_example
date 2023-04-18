@@ -1,12 +1,13 @@
-.pending-form{
-    background-color: rgba($color: black, $alpha: .8);
+.palindrome{
+    background-color: rgba($color: white, $alpha: .90);
     margin:100px;
     height: calc(100% - 200px);
     min-height: fit-content;
     overflow-y: auto;
-    color:#c1a66d;
+    color:#1f4d62;
+    border-radius: 15px;
     h2{
-        color:#c1a66d;
+        color:#1f4d62;
         font-family: kulturista-web;
         font-style: normal;
         font-weight: 500;
@@ -20,5 +21,18 @@
     }
     p {
         padding:60px;
+    }
+    .results{
+        overflow: auto;
+        padding:20px;
+        margin:auto;
+        margin-top:20px;
+        height: 500px;
+        max-width: 1700px;
+        width: 85%;
+        border: solid;
+        border-color:#1f4d62;
+        align-content: center;
+        border-radius: 15px;
     }
 }

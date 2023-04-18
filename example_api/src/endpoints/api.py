@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import faulthandler
 
-from src.endpoints import diamond_routes, palendrome_routes
+from src.endpoints import diamond_routes, palindrome_routes
 
 # initialize fast api
 app = FastAPI(title="NavFeas Example Project")
@@ -30,7 +30,7 @@ app.include_router(
     tags=["Diamond Endpoints"]
 )
 app.include_router(
-    palendrome_routes.router,
-    prefix="/palendrome",
+    palindrome_routes.router,
+    prefix="/palindrome",
     tags=["Psalendrome Endpoints"]
 )

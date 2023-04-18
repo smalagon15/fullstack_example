@@ -3,7 +3,12 @@ import Box from '@mui/material/Box';
 
 import PortalNav from './PortalNav';
 import './index.scss'
-
+/**
+ * This class takes in an object of components and a background image and creates navigation to each component
+ * @param {object} props.content - {'component title':{component, icon}}
+ * @param {string} props.background - string path to image in the public folder. Note '/' is the path to the public folder.
+ * @class PortalContainer 
+ */
 const PortalContainer = (props) => {
     // Recieved from parent component
     const content = props.content? props.content:{'No Content': <div/>};
@@ -22,8 +27,6 @@ const PortalContainer = (props) => {
                         <SelectedComponent />
                     </div>
                 </div>
-                
-                
             </Box>
         </Box>
   );

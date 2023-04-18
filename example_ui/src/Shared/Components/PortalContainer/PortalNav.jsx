@@ -9,11 +9,16 @@ import ListItemText from '@mui/material/ListItemText';
 import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 
-import { Drawer, DrawerHeader } from '../util';
-import './index.scss'
+import { Drawer, DrawerHeader } from './util';
 
-
-function PortalNav(props) {
+/**
+ * The side bar that has the names and icons for your comopents
+ * @param {object} props.sections - {'component title':{component, icon}}
+ * @param {string} props.portalContentKey - the active component title
+ * @param {function} props.setPortalContent - set the active component
+ * @class PortalNav 
+ */
+const PortalNav = (props) => {
     const [open, setOpen] = React.useState(false);
 
     const toggleDrawer = () => {

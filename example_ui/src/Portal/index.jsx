@@ -6,8 +6,6 @@ import {PortalContainer} from '../Shared/Components';
 // The compoents to fit into the portal
 import Diamond from './Diamond';
 import Palindrome from './Palindrome';
-// Import styling. Note this is scss vs css
-import './index.scss';
 
 const Content = {
     'Diamond': {component: Diamond, icon: <DiamondIcon />},
@@ -20,9 +18,7 @@ const Content = {
 const Portal = (props)=> {
 
   return (
-    <div className="App">
-      <PortalContainer background={'/images/prediction.png'} content={Content}/>
-    </div>
+    <PortalContainer background={'/images/prediction.png'} content={Content}/>
   )
 }
 export default Portal;
