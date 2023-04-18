@@ -1,6 +1,6 @@
 # Introduction
 
-This is a full stack example project with the intention of showing code that you would write in your undergrad courses and turn it into a software service. The folders palindrome and diamond are most like problems you would do for homework in an undergrad CS course. The rest of example_api is the code that is takes to run the code as an API. Then example_ui is an interface for the api outputs.
+This is a full stack example project with the intention of showing code that you would write in your undergrad courses and turn it into a software service. The folders palindrome and diamond in the api are most like problems you would do for homework in an undergrad CS course. The rest of example_api is the rest of the structure to run the code as a service. example_ui is an interface for the api to pass parameters and display the outputs.
 
 # The Services
 
