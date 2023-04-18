@@ -85,7 +85,7 @@ const Palindrome = (props) => {
                             }
                             sx={{ mb: 2 }}
                         >
-                            <AlertTitle>{value.word} is a palindrome</AlertTitle>
+                            <AlertTitle>{value.word + (value.result?" is a palindrome":" is not a palindrome")}</AlertTitle>
                         </Alert>
                 })}
             </div>
