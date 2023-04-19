@@ -18,6 +18,8 @@ This is a react application runing in a node:19 docker container. Instead of rea
 
 This is a python api runing in a python:3.8 docker container. We leverage uvicorn for development, which enables hot reloading. If you would like to test the api endpoints got to http://localhost:8000/docs to have a swaggar interface. 
 
+#
+
 # Development & Deployment
 
 ## Prerequisites to get started
