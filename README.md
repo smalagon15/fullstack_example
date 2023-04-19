@@ -9,7 +9,7 @@ This is a full stack example project with the intention of showing code that you
 
 ## example_ui
 
-This is a react application runing in a node:19 docker container. Instead of react-scripts and webpack we leverage vite and esbuild. Note that all the files have the .jsx extention for vite to properly recognize the packages. This comes with the latest fast refresh from react for hot module relod (hmr). Note that hmr is designed for webhooks and will just do a full page reload for classic class components. 
+This is a react application runing in a node:19 docker container. Instead of react-scripts and webpack we leverage vite and esbuild. Note that all the files have the .jsx extention for vite to properly recognize the packages. This comes with the latest fast refresh from react for hot module reload (hmr). Note that hmr is designed for webhooks and will just do a full page reload for classic class components. 
 
 <img src="./img/api.png" align="right"
      alt="API Screenshot" width="400" >
