@@ -11,5 +11,5 @@ def is_valid(request:dict):
 
     # Run word through the palindrome test
     example = Palindrome(word)
-    result = example.is_palnedrome()
+    result = example.is_palindrome()
     return result
