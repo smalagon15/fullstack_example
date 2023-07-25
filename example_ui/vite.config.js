@@ -8,7 +8,7 @@ export default defineConfig({
         port: 80,
         host: true,
         hmr: {
-            host:"localhost/ws",
+            host:"localhost",
         }
     },
     plugins: [
