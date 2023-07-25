@@ -4,19 +4,21 @@ This is a full stack example project with the intention of showing code that you
 
 # The Services
 
+## example_ui
+
 <img src="./img/ui.png" align="right"
      alt="UI Screenshot" width="400" >
 
-## example_ui
+This is a react application runing in a node:19 docker container. Instead of react-scripts and webpack we leverage vite and esbuild. Note that all the files have the .jsx extention for vite to properly recognize the packages. This comes with the latest fast refresh from react for hot module reload (hmr). Note that hmr is designed for webhooks and will just do a full page reload for classic class components. 
 
-This is a react application runing in a node:19 docker container. Instead of react-scripts and webpack we leverage vite and esbuild. Note that all the files have the .jsx extention for vite to properly recognize the packages. This comes with the latest fast refresh from react for hot module relod (hmr). Note that hmr is designed for webhooks and will just do a full page reload for classic class components. 
+## example_api
 
 <img src="./img/api.png" align="right"
      alt="API Screenshot" width="400" >
 
-## example_api
-
 This is a python api runing in a python:3.8 docker container. We leverage uvicorn for development, which enables hot reloading. If you would like to test the api endpoints got to http://localhost:8000/docs to have a swaggar interface. 
+
+
 
 # Development & Deployment
 

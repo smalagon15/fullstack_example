@@ -28,8 +28,6 @@ services:
     container_name: example_ui
     build: ./example_ui
     restart: always
-    environment:
-      - CHOKIDAR_USEPOLLING=true
     ports:
       - 80:80
     volumes:

@@ -1,9 +1,10 @@
 class Palindrome:
     def __init__(self, word):
-        self.word = word
+        self.word = word.lower()
 
-    def is_palnedrome(self):
+    def is_palindrome(self):
         word_length = len(self.word)
+        
         result = True
         for i in range (int(word_length/2)):
             if(self.word[i] != self.word[-(i+1)]):

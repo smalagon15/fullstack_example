@@ -32,5 +32,5 @@ app.include_router(
 app.include_router(
     palindrome_routes.router,
     prefix="/palindrome",
-    tags=["Psalendrome Endpoints"]
+    tags=["Palindrome Endpoints"]
 )
