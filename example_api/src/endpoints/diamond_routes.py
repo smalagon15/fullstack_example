@@ -6,7 +6,7 @@ from src.diamond import Diamond
 router = APIRouter()
 
 @router.post('/generate')
-def dimond(request: dict):
+def diamond(request: dict):
     # Parse the dimension parameter from the request and conform to int
     dimension = int(request['dimension'])
     # Instantiate Diamond class with dimensions
